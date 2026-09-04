@@ -1,15 +1,20 @@
 name: second workflow
-on: 
-    push:
-    workflow_dispatch:
-jobs: 
-    hello-job:
-        runs-on: ubutnu-latest
-        steps:
-           - name: "welcome"
-             run echo "welcome to the devops"
-    bye-job:
-         runs-on: ubutnu-latest
-         steps:
-           - name: "bye"
-             run: echo "bye bye"
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: welcome
+        run: echo "welcome to the devops"
+
+  bye-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: bye
+        run: echo "bye bye"
