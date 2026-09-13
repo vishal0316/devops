@@ -13,8 +13,16 @@ jobs:
              with: 
                node-verison: 24
                chache: npm
+
+           - name: "setup node js in VM"
+             uses: actions/setup-node@v4
+
+
            - name: install dependency
              run: npm ci
+
+           - name: run eslint in app
+             run: npm run lint
 
            - name: make react build
              run: npm run build
